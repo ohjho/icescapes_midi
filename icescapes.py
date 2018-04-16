@@ -40,9 +40,9 @@ for i in range(1, carbon_data.size):
     my_data_chg.append({'event_date' : carbon_data.index[i],'magnitude' : (carbon_data[i]/ carbon_data[i-1] -1) * 100 })
     my_data_print.append((carbon_data[i]/ carbon_data[i-1] -1) * 100)
 
-my_data = my_data_chg[-100:]
-my_data_print = my_data_print[1:]
-print(max(my_data_print),min(my_data_print))
+my_data = my_data_chg[1:]
+#print("raw data:\n{0}".format(carbon_data))
+#print("changes:\n{0}".format(my_data_print[1:]))
 # Data should look like this
 # my_data = [
 #     {'event_date': <datetime object>, 'magnitude': 3.4},
